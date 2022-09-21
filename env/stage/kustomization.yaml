@@ -3,3 +3,7 @@ kind: Kustomization
 
 resources:
 - ../../base
+images:
+- name: ghcr.io/apsega/demo-app
+  newName: ghcr.io/apsega/demo-app
+  newTag: d80773e4fa3b0ad7bf85b60ca2d50fbdf9b8cfd7
