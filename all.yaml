@@ -25,7 +25,7 @@ spec:
         app: demo-app
     spec:
       containers:
-      - image: ghcr.io/apsega/demo-app:85f7b3c59b367db1404a4ab4727d75986f6b3ce3
+      - image: ghcr.io/apsega/demo-app:d80773e4fa3b0ad7bf85b60ca2d50fbdf9b8cfd7
         name: demo-app
         ports:
         - containerPort: 8080
