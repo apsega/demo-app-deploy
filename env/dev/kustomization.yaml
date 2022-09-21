@@ -3,3 +3,8 @@ kind: Kustomization
 
 resources:
 - ../../base
+
+images:
+- name: ghcr.io/argocon2022-workshop/demo-app
+  newName: ghcr.io/apsega/demo-app
+  newTag: e43fc3fec3b56d8948ef75d408883bf44c564814
