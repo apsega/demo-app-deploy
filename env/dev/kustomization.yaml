@@ -5,6 +5,9 @@ resources:
 - ../../base
 
 images:
+- name: ghcr.io/apsega/demo-app
+  newName: ghcr.io/apsega/demo-app
+  newTag: 33ac470f564b16f89834de3e3c8bb069b0184036
 - name: ghcr.io/argocon2022-workshop/demo-app
   newName: ghcr.io/apsega/demo-app
   newTag: d80773e4fa3b0ad7bf85b60ca2d50fbdf9b8cfd7
