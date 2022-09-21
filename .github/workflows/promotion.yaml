@@ -31,7 +31,7 @@ jobs:
           ENV="${{ steps.commit-metadata.outputs.ENV || 'dev' }}"
           if [ $ENV == "dev" ]; then
             echo "Promoting $IMAGE to staging"
-            cd env/stage && kustomize edit set image ghcr.io/argocon2022-workshop/demo-app=$IMAGE
+            cd env/stage && kustomize edit set image ghcr.io/apsega/demo-app=$IMAGE
             git add .
             git commit -m "Promote stage to $IMAGE"
             git notes append -m "image: $IMAGE"
@@ -40,7 +40,7 @@ jobs:
           elif [ $ENV == "stage" ]; then
             echo "Promoting $IMAGE to production"
             git checkout -b auto-promotion
-            cd env/prod && kustomize edit set image ghcr.io/argocon2022-workshop/demo-app=$IMAGE
+            cd env/prod && kustomize edit set image ghcr.io/apsega/demo-app=$IMAGE
             git add .
             git commit -m "Promote prod to $IMAGE"
             git push origin auto-promotion --force
